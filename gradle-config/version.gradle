@@ -1,0 +1,30 @@
+/**
+ * Hold all the version numbers in the same place.
+ */
+
+ext.kotlinVersion = '1.3.60'
+
+ext.buildToolsVersions = [
+        compileSdk: 30,
+        targetSdk : 30,
+        minSdk    : 25,
+        buildTool : "30.0.2"
+]
+
+ext.internalLibraryVersion = '1.0.0'
+
+ext.libraryVersions = [
+        appCompatVersion       : "1.2.0",
+        androidxCoreVersion    : "1.3.1",
+        androidxActivityVersion: "1.1.0",
+        androidxFragmentVersion: "1.2.5",
+        pagingVersion          : "3.0.1",
+        archComponentsVersion  : "2.1.0",
+        roomDbVersion          : "2.2.5",
+        okhttpVersion          : "4.2.0",
+        retrofitVersion        : "2.6.1",
+        glide                  : '4.9.0',
+        roboelectricVersion    : '4.0.2',
+        coroutinesVersion      : '1.3.9'
+]
+
