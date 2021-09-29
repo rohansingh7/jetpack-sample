@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -33,11 +34,40 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.3.2'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //Kotlin
+    api deps.kotlin.stdlib
+    api deps.kotlin.coroutines
+
+    //Android
+    api deps.androidDependencies.appCompat
+    implementation deps.androidDependencies.androidXCore
+    implementation deps.androidDependencies.activityKtx
+    implementation deps.androidDependencies.fragmentKtx
+    implementation deps.androidDependencies.paging
+
+    //DI
+    api deps.daggerDep.core
+    kapt deps.daggerDep.compiler
+
+    //Arch components
+    api deps.archComponents.components
+    kapt deps.archComponents.componentsCompiler
+    api deps.archComponents.viewModelKtx
+
+    //Room
+    api deps.roomDb.core
+    api deps.roomDb.ktx
+
+    //Networking
+    api deps.networking.okhttp
+    api deps.networking.okhttpLog
+    api deps.networking.gson
+    api deps.networking.retrofit
+    api deps.networking.retrofitGson
+
+    //UI
+    api deps.ui.constraintLayout
+    api deps.ui.recyclerview
+    api deps.ui.material
+    api deps.ui.lottie
 }

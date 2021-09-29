@@ -21,17 +21,17 @@ deps.archComponents.components = "androidx.lifecycle:lifecycle-extensions:${root
 deps.archComponents.componentsCompiler = "androidx.lifecycle:lifecycle-compiler:${rootProject.ext.libraryVersions.archComponentsVersion}"
 deps.archComponents.viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${rootProject.ext.libraryVersions.archComponentsVersion}"
 
-deps.room = [:]
-deps.room.core = "androidx.room:room-runtime:${rootProject.ext.libraryVersions.roomDbVersion}"
-deps.room.compiler = "androidx.room:room-compiler:${rootProject.ext.libraryVersions.roomDbVersion}"
-deps.room.ktx = "androidx.room:room-ktx:${rootProject.ext.libraryVersions.roomDbVersion}"
+deps.roomDb = [:]
+deps.roomDb.core = "androidx.room:room-runtime:${rootProject.ext.libraryVersions.roomDbVersion}"
+deps.roomDb.compiler = "androidx.room:room-compiler:${rootProject.ext.libraryVersions.roomDbVersion}"
+deps.roomDb.ktx = "androidx.room:room-ktx:${rootProject.ext.libraryVersions.roomDbVersion}"
 
-deps.network = [:]
-deps.network.okhttp = "com.squareup.okhttp3:okhttp:${rootProject.ext.libraryVersions.okhttpVersion}"
-deps.network.okhttpLog = "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.libraryVersions.okhttpVersion}"
-deps.network.gson = 'com.google.code.gson:gson:2.8.5'
-deps.network.retrofit = "com.squareup.retrofit2:retrofit:${rootProject.ext.libraryVersions.retrofitVersion}"
-deps.network.retrofitGson = "com.squareup.retrofit2:converter-gson:${rootProject.ext.libraryVersions.retrofitVersion}"
+deps.networking = [:]
+deps.networking.okhttp = "com.squareup.okhttp3:okhttp:${rootProject.ext.libraryVersions.okhttpVersion}"
+deps.networking.okhttpLog = "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.libraryVersions.okhttpVersion}"
+deps.networking.gson = 'com.google.code.gson:gson:2.8.5'
+deps.networking.retrofit = "com.squareup.retrofit2:retrofit:${rootProject.ext.libraryVersions.retrofitVersion}"
+deps.networking.retrofitGson = "com.squareup.retrofit2:converter-gson:${rootProject.ext.libraryVersions.retrofitVersion}"
 
 deps.ui = [:]
 deps.ui.constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
@@ -58,6 +58,11 @@ deps.testing.paging = "androidx.paging:paging-common:${rootProject.ext.libraryVe
 
 deps.junit = [:]
 deps.junit.core = "androidx.test.ext:junit:${rootProject.ext.libraryVersions.junit}"
+
+deps.daggerDep = [:]
+deps.daggerDep.core = "com.google.dagger:dagger:${rootProject.ext.libraryVersions.daggerVersion}"
+deps.daggerDep.compiler = "com.google.dagger:dagger-compiler:${rootProject.ext.libraryVersions.daggerVersion}"
+
 
 
 
