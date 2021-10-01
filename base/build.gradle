@@ -1,0 +1,75 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    //Kotlin
+    api deps.kotlin.stdlib
+    api deps.kotlin.coroutines
+
+    //Android
+    api deps.androidDependencies.appCompat
+    api deps.androidDependencies.androidXCore
+    api deps.androidDependencies.activityKtx
+    api deps.androidDependencies.fragmentKtx
+
+
+    //Arch components
+    api deps.archComponents.components
+    kapt deps.archComponents.componentsCompiler
+    api deps.archComponents.viewModelKtx
+
+    //Room
+    api deps.roomDb.core
+    api deps.roomDb.ktx
+
+    //Networking
+    api deps.networking.okhttp
+    api deps.networking.okhttpLog
+    api deps.networking.gson
+    api deps.networking.retrofit
+    api deps.networking.retrofitGson
+
+    //UI
+    api deps.ui.constraintLayout
+    api deps.ui.recyclerview
+    api deps.ui.material
+    api deps.ui.lottie
+
+    api deps.logging.timber
+
+    //Glide
+    implementation  deps.glide.core
+    kapt  deps.glide.compiler
+}

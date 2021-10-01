@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    font size-->
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium_x">14sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_large">20sp</dimen>
+    <dimen name="font_extra_large">29sp</dimen>
+
+
+    <!-- Margins -->
+    <dimen name="layoutMarginSmall">12dp</dimen>
+    <dimen name="layoutMarginMedium">16dp</dimen>
+    <dimen name="layoutMarginLarge">24dp</dimen>
+
+    <!-- others -->
+    <dimen name="height200">200dp</dimen>
+    <dimen name="height64">64dp</dimen>
+    <dimen name="size42">42dp</dimen>
+
+</resources>
