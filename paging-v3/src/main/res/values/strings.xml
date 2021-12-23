@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">paging-v3</string>
+
+    <string name="with_network">Network only</string>
+    <string name="with_database">Network with caching</string>
+
+
+    <string name="content_description_news_item_image">News Item Image</string>
+    <string name="content_description_news_image">News Image</string>
+    <string name="content_description_back_btn">Back button</string>
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="lbl_price">Price</string>
+
 </resources>

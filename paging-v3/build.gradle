@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -19,8 +20,18 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://newsapi.org/"'
+            buildConfigField "String", "API_KEY", '"b4bcb7c4a90c461d8c3d1839c73e5fc1"'
+        }
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://newsapi.org/"'
+            buildConfigField "String", "API_KEY", '"b4bcb7c4a90c461d8c3d1839c73e5fc1"'
+
         }
     }
     compileOptions {
@@ -30,44 +41,26 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
 }
 
 dependencies {
 
-    //Kotlin
-    api deps.kotlin.stdlib
-    api deps.kotlin.coroutines
+    implementation project(':base')
+    /// HILT
+    //DI
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-compiler:2.38.1"
 
-    //Android
-    api deps.androidDependencies.appCompat
-    implementation deps.androidDependencies.androidXCore
-    implementation deps.androidDependencies.activityKtx
-    implementation deps.androidDependencies.fragmentKtx
+    //Paging
     implementation deps.androidDependencies.paging
 
-    //DI
-    api deps.daggerDep.core
-    kapt deps.daggerDep.compiler
-
-    //Arch components
-    api deps.archComponents.components
-    kapt deps.archComponents.componentsCompiler
-    api deps.archComponents.viewModelKtx
-
-    //Room
-    api deps.roomDb.core
-    api deps.roomDb.ktx
-
-    //Networking
-    api deps.networking.okhttp
-    api deps.networking.okhttpLog
-    api deps.networking.gson
-    api deps.networking.retrofit
-    api deps.networking.retrofitGson
-
-    //UI
-    api deps.ui.constraintLayout
-    api deps.ui.recyclerview
-    api deps.ui.material
-    api deps.ui.lottie
+    testImplementation deps.testing.junit
+    testImplementation deps.testing.mockkCore
+    testImplementation deps.testing.coroutines
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:1.5.31"
 }

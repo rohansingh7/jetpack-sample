@@ -36,7 +36,7 @@ deps.networking.retrofitGson = "com.squareup.retrofit2:converter-gson:${rootProj
 deps.ui = [:]
 deps.ui.constraintLayout = "androidx.constraintlayout:constraintlayout:1.1.3"
 deps.ui.recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
-deps.ui.material = "com.google.android.material:material:1.0.0"
+deps.ui.material = "com.google.android.material:material:1.1.0"
 deps.ui.lottie = "com.airbnb.android:lottie:3.3.0"
 
 deps.glide = [:]
@@ -47,7 +47,8 @@ deps.glide.compiler = "com.github.bumptech.glide:compiler:${rootProject.ext.libr
 deps.testing = [:]
 deps.testing.junit = 'junit:junit:4.12'
 deps.testing.junitRunner = 'androidx.test.runner.AndroidJUnitRunner'
-deps.testing.mockitoKotlin = 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0'
+deps.testing.mockkCore = "io.mockk:mockk:${rootProject.ext.libraryVersions.mockk}"
+deps.testing.mockkAndroid = "io.mockk:mockk-android:${rootProject.ext.libraryVersions.mockk}"
 deps.testing.roboelectric = "org.robolectric:robolectric:${rootProject.ext.libraryVersions.roboelectricVersion}"
 deps.testing.roboelectricMultidex = "org.robolectric:shadows-multidex:${rootProject.ext.libraryVersions.roboelectricVersion}"
 deps.testing.aacTesting = "androidx.arch.core:core-testing:${rootProject.ext.libraryVersions.archComponentsVersion}"
@@ -62,6 +63,9 @@ deps.junit.core = "androidx.test.ext:junit:${rootProject.ext.libraryVersions.jun
 deps.daggerDep = [:]
 deps.daggerDep.core = "com.google.dagger:dagger:${rootProject.ext.libraryVersions.daggerVersion}"
 deps.daggerDep.compiler = "com.google.dagger:dagger-compiler:${rootProject.ext.libraryVersions.daggerVersion}"
+
+deps.logging = [:]
+deps.logging.timber = "com.jakewharton.timber:timber:${rootProject.ext.libraryVersions.timber}"
 
 
 
