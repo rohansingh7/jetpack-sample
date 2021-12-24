@@ -9,3 +9,4 @@ dependencyResolutionManagement {
 rootProject.name = "jetpack-sample"
 include ':paging-v3'
 include ':base'
+include ':compose-basics'
