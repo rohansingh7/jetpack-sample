@@ -1,4 +1,4 @@
-package com.byjus.jetpack.paging
+package com.byjus.jetpack.compose
 
 import org.junit.Test
 

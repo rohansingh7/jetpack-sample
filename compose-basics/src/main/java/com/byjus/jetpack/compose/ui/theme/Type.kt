@@ -1,4 +1,4 @@
-package com.byjus.jetpack.paging.ui.theme
+package com.byjus.jetpack.compose.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

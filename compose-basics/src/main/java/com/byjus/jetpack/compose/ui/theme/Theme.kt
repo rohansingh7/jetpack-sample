@@ -1,4 +1,4 @@
-package com.byjus.jetpack.paging.ui.theme
+package com.byjus.jetpack.compose.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

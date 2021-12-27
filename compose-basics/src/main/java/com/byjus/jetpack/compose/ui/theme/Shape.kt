@@ -1,4 +1,4 @@
-package com.byjus.jetpack.paging.ui.theme
+package com.byjus.jetpack.compose.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
